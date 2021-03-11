@@ -1,9 +1,9 @@
 ﻿namespace SWD_STONKS
 {
-    public interface ISubject
+    public abstract class Subject
     {
-        public void Attach(IObserver observer);
-        public void Detach(IObserver observer);
-        public void Notify();
+        public abstract void Attach(IObserver observer);
+        public abstract void Detach(IObserver observer);
+        public abstract void Notify();
     }
 }
