@@ -14,6 +14,7 @@ namespace SWD_STONKS
         {
             StockList.Add(stock);
             stock.Attach(this);
+            CalculateTotalValue();
             return this;
         }
 
