@@ -5,7 +5,7 @@ namespace SWD_STONKS
     public class Portfolio :IObserver
     {
         public List<Stock> StockList = new List<Stock>();
-        public void Update(Subject su)
+        public void Update(StockSubject su)
         {
             for (int i = 0; i < StockList.Count; i++)
             {

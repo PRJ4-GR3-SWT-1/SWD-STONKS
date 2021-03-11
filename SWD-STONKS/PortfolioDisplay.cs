@@ -8,7 +8,7 @@ namespace SWD_STONKS
     {
         private ICollection<Portfolio> portfolios;
 
-        public void Update(Subject sub)
+        public void Update(StockSubject sub)
         {
             foreach (var port in portfolios)
             {
