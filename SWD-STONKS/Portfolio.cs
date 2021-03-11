@@ -22,6 +22,7 @@ namespace SWD_STONKS
 
         private void CalculateTotalValue()
         {
+            totalValue = 0;
             foreach (Stock stonk in StockList)
             {
                 totalValue += stonk.Value;
