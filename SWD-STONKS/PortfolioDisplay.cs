@@ -8,11 +8,14 @@ namespace SWD_STONKS
     {
         private ICollection<Portfolio> portfolios;
 
-        void public Update(Subject sub)
+        public void Update(Subject sub)
         {
             foreach (var port in portfolios)
             {
-                Console.WriteLine($"{0}: {1}",port.Name,port.Price);
+                foreach (Stock stonk in port.stocks)
+                {
+                    Console.WriteLine($"{0}: {1}", stonk.Name, stonk.Value);
+                }
             }
         }
     }
