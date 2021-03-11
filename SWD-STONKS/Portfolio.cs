@@ -13,9 +13,11 @@ namespace SWD_STONKS
             }
         }
 
-        public void AddStockToPortfolio(Stock stock)
+        public Portfolio AddStockToPortfolio(Stock stock)
         {
             StockList.Add(stock);
+            stock.Attach(this);
+            return this;
         }
 
         private double totalValue;
