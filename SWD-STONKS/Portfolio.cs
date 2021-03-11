@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace SWD_STONKS
 {
@@ -8,6 +9,7 @@ namespace SWD_STONKS
         public void Update(StockSubject su)
         {
             CalculateTotalValue();
+            Console.WriteLine("Current portfolio value: " + TotalValue);
         }
 
         public Portfolio AddStockToPortfolio(Stock stock)
