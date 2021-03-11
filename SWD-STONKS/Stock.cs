@@ -9,8 +9,10 @@ namespace SWD_STONKS
         public string Name { get; set; }
         public double Value { get; set; }
 
-        public Stock()
+        public Stock(string name, double value)
         {
+            Value = value;
+            Name = name;
             this.observers = new List<IObserver>();
         }
 
