@@ -10,6 +10,7 @@ namespace SWD_STONKS
 
         public PortfolioDisplay(Portfolio port)
         {
+            portfolios.Add(port);
             foreach (Stock stonk in port.StockList)
             {
                 stonk.Attach(this);
@@ -29,7 +30,7 @@ namespace SWD_STONKS
             {
                 foreach (Stock stonk in port.StockList)
                 {
-                    Console.WriteLine($"{0}: {1}", stonk.Name, stonk.Value);
+                    Console.WriteLine($"{stonk.Name}: {stonk.Value}");
                 }
             }
         }
