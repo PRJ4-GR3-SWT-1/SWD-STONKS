@@ -19,7 +19,7 @@ namespace SWD_STONKS
 
             s1.Value = 200;
 
-            
+            s2.Value = 33;
             
             
 
