@@ -7,13 +7,27 @@ namespace SWD_STONKS
     public class Stock : StockSubject
     {
         public string Name { get; set; }
-        public double Value { get; set; }
+
+        private double stockValue;
+        public double Value
+        {
+            get
+            {
+                return stockValue;
+            }
+            set
+            {
+                stockValue = value;
+                Notify();
+            }
+        }
 
         public Stock(string name, double value)
         { 
             Value = value;
             Name = name;
         }
+
 
 
        
