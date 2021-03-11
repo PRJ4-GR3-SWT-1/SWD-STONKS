@@ -20,9 +20,9 @@ namespace SWD_STONKS
 
         private void CalculateTotalValue()
         {
-            for (int i = 0; i < StockList.Count; i++)
+            foreach (Stock stock in StockList)
             {
-                totalValue += StockList[i].Value;
+                totalValue += stock.Value;
             }
         }
 
