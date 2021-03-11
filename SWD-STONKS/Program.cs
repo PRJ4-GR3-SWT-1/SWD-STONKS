@@ -15,6 +15,10 @@ namespace SWD_STONKS
             Portfolio po = new Portfolio();
             po.AddStockToPortfolio(s1).AddStockToPortfolio(s2).AddStockToPortfolio(s2);
             Console.WriteLine("Current portfolio value: " + po.TotalValue);
+
+            s1.Value = 200;
+
+            Console.WriteLine("Current portfolio value: " + po.TotalValue);
         }
     }
 }
