@@ -7,20 +7,33 @@ namespace SWD_STONKS
         public List<Stock> StockList = new List<Stock>();
         public void Update(StockSubject su)
         {
-            for (int i = 0; i < StockList.Count; i++)
-            {
-                totalValue += StockList[i].Value;
-            }
+            CalculateTotalValue();
         }
 
         public Portfolio AddStockToPortfolio(Stock stock)
         {
             StockList.Add(stock);
             stock.Attach(this);
+            CalculateTotalValue();
             return this;
         }
 
+        private void CalculateTotalValue()
+        {
+            for (int i = 0; i < StockList.Count; i++)
+            {
+                totalValue += StockList[i].Value;
+            }
+        }
+
         private double totalValue;
-        public double TotalValue { get; }
+
+        public double TotalValue
+        {
+            get
+            {
+                return totalValue;
+            }
+        }
     }
 }
