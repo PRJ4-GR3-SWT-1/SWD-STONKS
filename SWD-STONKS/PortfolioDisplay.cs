@@ -6,17 +6,22 @@ namespace SWD_STONKS
 {
     class PortfolioDisplay : IObserver
     {
-        private ICollection<Portfolio> portfolios;
+        private List<Portfolio> portfolios = new List<Portfolio>();
 
         public void Update(Subject sub)
         {
             foreach (var port in portfolios)
             {
-                foreach (Stock stonk in port.stocks)
+                foreach (Stock stonk in port.StockList)
                 {
                     Console.WriteLine($"{0}: {1}", stonk.Name, stonk.Value);
                 }
             }
+        }
+
+        public void AddPortfolio(Portfolio port)
+        {
+            portfolios.Add(port);
         }
     }
 }
