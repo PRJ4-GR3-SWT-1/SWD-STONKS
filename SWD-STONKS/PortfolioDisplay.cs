@@ -8,10 +8,14 @@ namespace SWD_STONKS
     {
         private List<Portfolio> portfolios = new List<Portfolio>();
 
-        PortfolioDisplay(StockSubject stockSubject)
+        public PortfolioDisplay(StockSubject stockSubject)
         {
             stockSubject.Attach(this);
-        } 
+        }
+        public void attachSubject(StockSubject stockSubject)
+        {
+            stockSubject.Attach(this);
+        }
 
         public void Update(StockSubject sub)
         {
