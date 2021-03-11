@@ -8,7 +8,7 @@ namespace SWD_STONKS
     {
         private List<Portfolio> portfolios = new List<Portfolio>();
 
-        public void Update(Subject sub)
+        public void Update(StockSubject sub)
         {
             foreach (var port in portfolios)
             {

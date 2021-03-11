@@ -12,7 +12,7 @@ namespace SWD_STONKS
             Stock s1 = new Stock("Vestas", 100);
             Stock s2 = new Stock("Pandora", 20);
 
-            Portfolio po =new Portfolio()
+            Portfolio po = new Portfolio()
         }
     }
 }
