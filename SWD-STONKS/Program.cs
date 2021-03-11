@@ -9,6 +9,10 @@ namespace SWD_STONKS
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Stock s1 = new Stock("Vestas", 100);
+            Stock s2 = new Stock("Pandora", 20);
+
+            Portfolio po =new Portfolio()
         }
     }
 }
