@@ -11,21 +11,4 @@ namespace SWD_STONKS
             Console.WriteLine("Hello World!");
         }
     }
-
-   public interface ISubject
-    {
-        public void Attach(IObserver observer);
-        public void Detach(IObserver observer);
-        public void Notify();
-    }
-
-   public interface IObserver
-   {
-       public void Update(ISubject subject);
-   }
-
-   public class Portfolio :IObserver
-   {
-
-   }
 }
