@@ -21,8 +21,8 @@ namespace SWD_STONKS
             Console.WriteLine("Current portfolio value: " + po.TotalValue);
             
             
-            PortfolioDisplay PD = new PortfolioDisplay();
-            PD.AddPortfolio(po);
+            PortfolioDisplay PD = new PortfolioDisplay(po);
+            
 
             s1.Value = 111;
 
