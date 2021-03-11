@@ -13,7 +13,6 @@ namespace SWD_STONKS
         { 
             Value = value;
             Name = name;
-            this.observers = new List<IObserver>();
         }
 
 
